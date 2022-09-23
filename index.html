@@ -1,6 +1,7 @@
 <html>
 <script type="text/javascript">
     function geoShowPosition(position) {
+        console.log('geoShowPosition');
         if (position) {
             const location = { lat: position.coords.latitude, lng: position.coords.longitude };
             console.log(location);
@@ -10,21 +11,22 @@
     }
 
     function geoShowError(error) {
+        console.log('geoShowError');
         console.log(`getPosError:${error.code},${navigator.geolocation},${error.message}`);
 
     }
 
 
 
-    function add() {
-        console.log('aa');
+    function goGetLocation() {
+        console.log('start location');
         navigator.geolocation.getCurrentPosition(geoShowPosition, geoShowError);
     }
 </script>
 
 
 <body>
-    <button onclick="add()">add</button>
+    <button onclick="goGetLocation()">add</button>
 </body>
 
 </html>
