@@ -1,0 +1,30 @@
+<html>
+<script type="text/javascript">
+function geoShowPosition(position) {
+        if (position) {
+          const location = { lat: position.coords.latitude, lng: position.coords.longitude };
+          
+        } else {
+          
+        }
+      }
+
+      function geoShowError(error) {
+        console.log(`getPosError:${error.code},${navigator.geolocation},${error.message}`);
+        
+      }
+
+      
+
+    function add() {
+        console.log('aa');
+        navigator.geolocation.getCurrentPosition(geoShowPosition, geoShowError);
+    }
+</script>
+
+
+<body>
+    <button onclick="add()">add</button>
+</body>
+
+</html>
