@@ -1,20 +1,20 @@
 <html>
 <script type="text/javascript">
-function geoShowPosition(position) {
+    function geoShowPosition(position) {
         if (position) {
-          const location = { lat: position.coords.latitude, lng: position.coords.longitude };
-          
+            const location = { lat: position.coords.latitude, lng: position.coords.longitude };
+            console.log(location);
         } else {
-          
+            console.log('reject');
         }
-      }
+    }
 
-      function geoShowError(error) {
+    function geoShowError(error) {
         console.log(`getPosError:${error.code},${navigator.geolocation},${error.message}`);
-        
-      }
 
-      
+    }
+
+
 
     function add() {
         console.log('aa');
